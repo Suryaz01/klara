@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Website</title>
+</head>
+<body>
+
+<script>
+    const password = prompt("Enter the password:");
+
+    if (password !== "klara") {
+        alert("Incorrect password. Access denied.");
+        window.location.href = "https://www.google.com"; // Redirect to another site (optional)
+    }
+
+    function submitResponse() {
+        const responseText = document.getElementById("response").value;
+        document.getElementById("displayResponse").innerText = "Your response: " + responseText;
+
+        // Log the response in the console
+        console.log("User response: " + responseText);
+    }
+</script>
+
+<!-- Your private content goes here -->
+<h1>YOU ARE THE BEST FRIEND!</h1>
+
+<!-- Form for writing something back -->
+<label for="response">Write something:</label>
+<textarea id="response" name="response" rows="4" cols="50"></textarea><br>
+<button onclick="submitResponse()">Submit</button>
+
+<!-- Display the response dynamically -->
+<p id="displayResponse"></p>
+
+</body>
+</html>
